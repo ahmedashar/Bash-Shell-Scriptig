@@ -1,0 +1,50 @@
+01/////// if statement
+
+if [codition]
+then
+    statement
+fi    // for end if statement
+
+02/////// if-else statement
+if [codition]
+then
+    statement
+elif
+then
+    statement
+else
+    statement
+fi 
+
+03////// while loop          
+while [condition] 
+do
+statement
+done
+
+
+04////////// command line argument  --> the arguments with commands are assigned into $1 , $2 , $3 and so on
+                                    --> $0 contain fileName
+                                    --> $@ contains all arguments values
+if [ $# -ne 2 ]   // $# --> number of arguments
+then 
+    echo "$# number not eq to 2"  
+    exit 1           
+fi
+
+
+
+05//////////// shift
+It is possible to reference individual command-line
+parameters beyond $9 by using the shift command
+When shift is used:
+The original value in $1 is lost(so make sure you either use this value first,or store it in another variable.e.g. first-$1)
+    > $1 assumes the value of the second parameter
+    > $2 assumes the value of the third parameter
+     and so on,down to:
+    > $9 assumes the value of the tenth parameter
+
+
+//comparision operator 
+-le (<=)
+-ge (>=)
