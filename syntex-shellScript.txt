@@ -25,7 +25,7 @@ done
 
 04////////// command line argument  --> the arguments with commands are assigned into $1 , $2 , $3 and so on
                                     --> $0 contain fileName
-                                    --> $@ contains all arguments values
+                                    --> $* or $@ contains all arguments values
 if [ $# -ne 2 ]   // $# --> number of arguments
 then 
     echo "$# number not eq to 2"  
@@ -48,3 +48,14 @@ The original value in $1 is lost(so make sure you either use this value first,or
 //comparision operator 
 -le (<=)
 -ge (>=)
+
+
+//// get the length of string (input string)
+len=${#input}
+
+
+//// 
+string=abc
+    $(string:index:howmany)         
+then ${string:0:1} equals a and ${string:2:1} equals c.
+This script takes the value of the variable $i: so it just takes the character at position $i.
